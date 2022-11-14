@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rubik+Wet+Paint&display=swap');
+
+h1 {
+	font-family: 'Lobster', cursive;
+}
+
+body {
+	align-items: center;
+	background: rgb(255,118,0);
+	background: linear-gradient(90deg, rgba(255,118,0,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.logo {
+	height: 15%;
+	width: 15%;
+	margin: auto;
+	display: block;
+}
+
+button {
+	margin: auto;
+	display: block;
+	background: none;
+	border: 2px solid;
+	font: inherit;
+	font-weight: bold;
+	line-height: 1;
+	padding: 1em 2em;
+	color: #800080;
+	width: 200px;
+	cursor: pointer;
+}
+
+.btndiv {
+	margin-top: 5%;
+}
+
+.menuBtn:hover,
+.menuBtn:focus {
+  -webkit-box-shadow: 0 0 25px;
+  box-shadow: 0 0 25px; 
+  transform: translateY(-0.25em);
+  animation: pulse 2s infinite ease-in;
+}
+
+@keyframes pulse {
+	0%, 100% { color: #800080}
+	33% { color: #990099}
+	66% { color: #ff00ff}
+}
+
+td, th {
+	text-align: center;
+}
+
+th {
+	font-size: 17px;
+	font-weight: bold;
+	font-stretch: extra-expanded;
+}
+
+td{
+	padding: 5px 0px;
+	text-align: center;
+	vertical-align:middle;
+	font-weight: 300;
+	font-size: 15px;
+	color: #fff;
+	border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+table{
+	width:100%;
+	table-layout: fixed;
+	margin-top: 2.5%;
+}
+
+.tbl-header{
+	width: 100%;
+	background-color: rgba(255,255,255,0.3);
+	position: relative;
+}
+
+.content {
+	display: flex;
+	align-items: left;
+	display: block;
+	line-height: 60px;
+	text-align: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background: #cb7afa;
+	width: 200px;
+	font-size: 17px;
+	margin: 25px;
+	margin-bottom: 1px;
+}
+
+
+h1 {
+    text-align: center;
+    padding-top: 5%;
+	font-size: 50px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+} 
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 12px rgba(0,0,0,0.7); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 12px rgba(0,0,0,0.7); 
+}

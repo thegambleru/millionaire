@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rubik+Wet+Paint&display=swap');
+
+
+body {
+	align-items: center;
+	
+}
+
+.logoCon {
+	width: 100%;
+}
+
+.logo {
+	margin: auto;
+	height: 10%;
+	width: 10%;
+	display: block;
+	padding: 0;
+}
+
+.lifeline {
+	cursor: pointer;
+	background: transparent;
+    border: none;
+    outline: none;
+	text-align: center;
+	color: white;
+}
+
+i {
+	font-size: 25px;
+	margin-top: 5px;
+}
+
+.question {
+	margin: auto;
+	text-align: center;
+	margin: 2%;
+}
+
+.qCon {
+	background: linear-gradient(90deg, rgba(255, 119, 0, 0.575) 0%, rgba(0, 213, 255, 0.452) 100%);
+	width: 60%;
+	height: 250px;
+	margin: auto;
+	margin-top: 3%;
+	text-align: center;
+	border: 2px solid rgb(65, 64, 64);
+	border-radius: 15px;
+	color: white;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.Answers {
+	width: 60%;
+	height: 200px;
+	margin: auto;
+	margin-top: 3%;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.ans {
+	text-align: center;
+	width: 30%;
+	display: inline-block;
+	height: 30px;
+	text-align: center;
+	margin:auto;
+	-webkit-user-select: none;
+}
+
+.ans.a1 {
+	animation-fill-mode: forwards;
+	animation: fadeIn 1s;
+}
+
+.ans.a2 {
+	animation-fill-mode: forwards;
+	animation: fadeIn 4s;
+}
+
+.ans.a3 {
+	animation-fill-mode: forwards;
+	animation: fadeIn 7s;
+}
+
+.ans.a4 {
+	animation-fill-mode: forwards;
+	animation: fadeIn 10s;
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1}
+}
+
+.ansline1 {
+	width: 100%;
+	text-align: center;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+}
+
+.ansButton {
+	width: 50%;
+	background: none;
+	border: 2px solid rgb(65, 64, 64);
+	line-height: 1;
+	padding: 1em 2em;
+	cursor: pointer;
+	border-radius:10px;
+	background: linear-gradient(90deg, rgb(0, 132, 255) 0%, rgb(0, 47, 255) 100%);
+	color: white;
+}
+
+.ansButton:focus {
+  background: linear-gradient(90deg, rgba(0, 121, 16, 0.575) 0%, rgba(0, 255, 115, 0.452) 100%);
+  color: white;
+  border-color: white;
+}
+
+.subline {
+	margin-top: 5%;
+}
+
+.subButton {
+	width: 100%;
+	border: 2px solid rgb(65, 64, 64);
+	font: inherit;
+	line-height: 1;
+	margin: 0.5em;
+	padding: 1em 1.5em;
+	cursor: pointer;
+	border-radius:10px;
+	background: linear-gradient(90deg, rgb(0, 132, 255) 0%, rgb(0, 47, 255) 100%);
+	font-size: 20px;
+	color: white;
+}
+
+input {
+	opacity: 0.011;
+	z-index: 100;
+	width: 0.1%;
+}
+
+.ans input[type="radio"]:checked + label {
+	background: linear-gradient(90deg, rgb(112, 186, 255) 0%, rgb(54, 90, 255) 100%);
+	color: white;
+	border: 1px solid white;
+}
+
+label {
+	display: block;
+	margin: auto;
+	font-size: 20px;
+}
+
+.activeCorrect {
+	animation: confirm 1s infinite;
+}
+
+@keyframes confirm {
+	0% {background: linear-gradient(90deg, rgb(0, 121, 16) 0%, rgb(0, 235, 106) 100%)}
+	50% {background: linear-gradient(90deg, rgb(112, 186, 255) 0%, rgb(54, 90, 255) 100%)};
+}
+
+.activeWrong {
+	animation: wrong 1s infinite;
+}
+
+@keyframes wrong {
+	0% {background: linear-gradient(90deg, rgb(172, 0, 0) 0%, rgb(255, 0, 0) 100%)}
+	50% {background: linear-gradient(90deg, rgb(112, 186, 255) 0%, rgb(54, 90, 255) 100%)};
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Who wants to be an OLIGOFRIEND millionaire?</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='static/choosePlayer.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <img src="../static/images/logo.png" class="logo"> </img>
+    <form method='POST'>
+        <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+                {% for player in players %}
+                    <tr>
+                        <td> <button class="menuBtn" type="submit" formaction="/viewQuestions/{{player[0]}}"> {{player[0]}} </button></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </form>
+
+</body>
+</html></htm>

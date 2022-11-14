@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rubik+Wet+Paint&display=swap');
+
+h1 {
+	font-family: 'Lobster', cursive;
+}
+
+body {
+	align-items: center;
+	background: rgb(255,118,0);
+	background: linear-gradient(90deg, rgba(255,118,0,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.logo {
+	height: 15%;
+	width: 15%;
+	margin: auto;
+	display: block;
+}
+
+button {
+	margin: auto;
+	display: block;
+	margin-top: 10px;
+	background: none;
+	border: 2px solid;
+	font: inherit;
+	font-weight: bold;
+	line-height: 1;
+	padding: 1em 2em;
+	width: 250px;
+	color: #800080;
+}
+
+.btndiv {
+	margin-top: 5%;
+}
+
+.menuBtn:hover,
+.menuBtn:focus {
+  -webkit-box-shadow: 0 0 25px;
+  box-shadow: 0 0 25px; 
+  transform: translateY(-0.25em);
+  animation: pulse 2s infinite ease-in;
+}
+
+@keyframes pulse {
+	0%, 100% { color: #800080}
+	33% { color: #990099}
+	66% { color: #ff00ff}
+}

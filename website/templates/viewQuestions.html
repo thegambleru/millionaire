@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Who wants to be an OLIGOFRIEND millionaire?</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../static/viewQuestions.css'>
+</head>
+<body>
+    <div class="logoCon">
+
+        <div class="btndiv">
+            <form method="POST" action="/redirect">
+                <button type="submit" class="menuBtn" > Back To Menu </button>
+            </form>
+        </div>
+
+        <img src="../static/images/logo.png" class="logo"> </img>
+
+    </div>
+
+    <div class="contenttable">
+    <form method='POST' class="contentForm">
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th> Question </th>
+                        <th> A </th>
+                        <th> B </th>
+                        <th> C </th>
+                        <th> D </th>
+                        <th> Step </th>
+                        <th> Player </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    {% for row in rows %}
+                        <tr>
+                            <td> {{row[0]}}  </td>
+                            <td> {{row[1]}}  </td>
+                            <td> {{row[2]}}  </td>
+                            <td> {{row[3]}}  </td>
+                            <td> {{row[4]}}  </td>
+                            <td> {{row[6]}}  </td>
+                            <td> {{row[7]}}  </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </form>
+    </div>
+<script>
+
+</script>
+
+</body>
+</html>
