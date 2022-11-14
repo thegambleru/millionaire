@@ -33,7 +33,7 @@ def view(player):
 @views.route('/filtername', methods=["POST","GET"])
 def player():
 
-    playerlist = pd.read_excel(os.path.join(os.path.dirname(__file__), "files/players.xlsx"))
+    playerlist = pd.read_excel(os.path.join(os.path.dirname(__file__), "files/players.xls"))
     return render_template("choosePlayer.html", players=list(playerlist.values.tolist()))
 
 @views.route('/startGame', methods=["POST","GET"])
@@ -41,7 +41,7 @@ def start():
     global step_counter
     global lifelines_list
     step_counter = 1
-    playerlist = pd.read_excel(os.path.join(os.path.dirname(__file__), "files/players.xlsx"))
+    playerlist = pd.read_excel(os.path.join(os.path.dirname(__file__), "files/players.xls"))
     return render_template("startGame.html", players=list(playerlist.values.tolist()), lifelines=lifelines_list)
 
 @views.route('/getq/<playername>/<step>', methods=["POST","GET"])
