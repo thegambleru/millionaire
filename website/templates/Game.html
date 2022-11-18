@@ -6,6 +6,7 @@
     <title>Who wants to be an OLIGOFRIEND millionaire?</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../../../static/Game.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'>
     <script src="https://kit.fontawesome.com/9e1b09ab6a.js" crossorigin="anonymous"></script>
 </head>
 <body background="../../../static/images/bg.jpg">
@@ -45,49 +46,58 @@
 
     </div>
     
-    <form method='POST'>
-        <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
-                
-            </tbody>
-        </table>
-    </form>
-    
-    <div class="qCon">
-        <h1 class="question"> {{ question[0] }}? </h1>
-    </div>
-	
-    <form class="qForm" action="/check/{{player}}/{{question[5]}}" method="post">
-        <div class="Answers">
-            <div class="ansline1">
-                <div class="ans a1">
-                    <input type="radio" id="A" name="Ans" value="A" />
-                    <label class="ansButton" for="A"> A: {{question[1]}} </label>
-                </div>
-                <div class="ans a2">
-                    <input type="radio" id="B" name="Ans" value="B"/>
-                    <label class="ansButton" for="B"> B: {{question[2]}} </label>
-                </div>
+    <div class="mainDiv">
+        <div class="qDiv">
+            <div class="qCon">
+                <h1 class="question"> {{ question[0] }}? </h1>
             </div>
+            
+            <form class="qForm" action="/check/{{player}}/{{question[5]}}" method="post">
+                <div class="Answers">
+                    <div class="ansline1">
+                        <div class="ans a1">
+                            <input type="radio" id="A" name="Ans" value="A" />
+                            <label class="ansButton" for="A"> A: {{question[1]}} </label>
+                        </div>
+                        <div class="ans a2">
+                            <input type="radio" id="B" name="Ans" value="B"/>
+                            <label class="ansButton" for="B"> B: {{question[2]}} </label>
+                        </div>
+                    </div>
 
-            <div class="ansline2">
-                <div class="ans a3">
-                    <input type="radio" id="C" name="Ans" value="C"/>
-                    <label class="ansButton" for="C"> C: {{question[3]}} </label>
-                </div>
-                <div class="ans a4">
-                    <input type="radio" id="D" name="Ans" value="D"/>
-                    <label class="ansButton chk" for="D"> D: {{question[4]}} </label>
-                </div>
-            </div>
+                    <div class="ansline2">
+                        <div class="ans a3">
+                            <input type="radio" id="C" name="Ans" value="C"/>
+                            <label class="ansButton" for="C"> C: {{question[3]}} </label>
+                        </div>
+                        <div class="ans a4">
+                            <input type="radio" id="D" name="Ans" value="D"/>
+                            <label class="ansButton chk" for="D"> D: {{question[4]}} </label>
+                        </div>
+                    </div>
 
-            <div class="subline">
-                <div class="ans a5">
-                    <button type="submit" class="subButton"> Final Answer </button>
+                    <div class="subline">
+                        <div class="ans a5">
+                            <button type="submit" class="subButton"> Final Answer </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
-    </form>
+        <div class="stepDiv">
+            {% for i in range(1,11) %}
+                <div class={% if i == step %}
+                                activeStep
+                            {% else %}
+                                step 
+                            {% endif %}>
+                            {{i}}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
